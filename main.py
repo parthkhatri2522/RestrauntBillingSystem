@@ -13,4 +13,5 @@ self.menu_frame.pack(side=tk.LEFT)
 
 self.bill_frame = tk.Frame(self.root)
 self.bill_frame.pack(side=tk.RIGHT) 
- 
+tk.Label(self.menu_frame, text="Menu").pack()
+tk.Label(self.bill_frame, text="Bill").pack()
