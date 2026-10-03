@@ -13,4 +13,4 @@ self.menu_frame.pack(side=tk.LEFT)
 
 self.bill_frame = tk.Frame(self.root)
 self.bill_frame.pack(side=tk.RIGHT) 
- parth
+ 
