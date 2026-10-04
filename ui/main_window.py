@@ -9,6 +9,8 @@ class MainWindow:
         self.root.mainloop()
         from data.menu_data import menu
 
+from data.menu_data import menu
+
 for category, items in menu.items():
     tk.Label(self.menu_frame, text=category, font=("Arial", 12, "bold")).pack(anchor="w")
     
