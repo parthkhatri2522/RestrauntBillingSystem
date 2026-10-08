@@ -61,3 +61,18 @@ def update_bill(self):
         tk.END,
         f"Total: ₹{total}\n"
     )
+
+    self.bill_text.insert(
+    tk.END,
+    "\n==========================\n"
+)
+
+self.bill_text.insert(
+    tk.END,
+    f"Total: ₹{total}\n"
+)
+
+self.bill_text.insert(
+    tk.END,
+    "==========================\n"
+)
