@@ -26,3 +26,38 @@ for category, items in menu.items():
         tk.Label(frame, text=f"{item} - ₹{price}", width=20).pack(side=tk.LEFT)
         tk.Button(frame, text="+", command=lambda i=item: add_item(i)).pack(side=tk.LEFT)
         tk.Button(frame, text="-", command=lambda i=item: remove_item(i)).pack(side=tk.LEFT)
+
+        total = calculate_total(orders)
+self.bill_text.insert(tk.END, f"\nTotal: ₹{total}")
+
+def update_bill(self):
+
+    self.bill_text.delete("1.0", tk.END)
+
+    self.bill_text.insert(
+        tk.END,
+        "========== BILL ==========\n\n"
+    )
+
+    for item, quantity in orders.items():
+
+        price = get_price(item)
+        amount = price * quantity
+
+        self.bill_text.insert(
+            tk.END,
+            f"{item}\n"
+            f"  {quantity} x ₹{price} = ₹{amount}\n\n"
+        )
+
+    total = calculate_total(orders)
+
+    self.bill_text.insert(
+        tk.END,
+        "--------------------------\n"
+    )
+
+    self.bill_text.insert(
+        tk.END,
+        f"Total: ₹{total}\n"
+    )
