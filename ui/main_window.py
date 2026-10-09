@@ -76,3 +76,4 @@ self.bill_text.insert(
     tk.END,
     "==========================\n"
 )
+
