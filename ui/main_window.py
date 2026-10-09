@@ -1,4 +1,5 @@
 import tkinter as tk
+from tkinter import messagebox
 
 class MainWindow:
     def __init__(self):
@@ -50,30 +51,49 @@ def update_bill(self):
             f"  {quantity} x ₹{price} = ₹{amount}\n\n"
         )
 
+     total = calculate_total(orders)
+
+        self.bill_text.insert(
+            tk.END,
+            "==========================\n"
+        )
+
+        self.bill_text.insert(
+            tk.END,
+            f"Total: ₹{total}\n"
+        )
+
+    def generate_bill(self):
+
+    # Check whether the customer has selected anything
+    if not orders:
+        messagebox.showwarning(
+            "Empty Order",
+            "Please add at least one item before generating the bill."
+        )
+        return
+
     total = calculate_total(orders)
 
-    self.bill_text.insert(
-        tk.END,
-        "--------------------------\n"
-    )
+        bill = "========== FINAL BILL ==========\n\n"
 
-    self.bill_text.insert(
-        tk.END,
-        f"Total: ₹{total}\n"
-    )
+        for item, quantity in orders.items():
 
-    self.bill_text.insert(
-    tk.END,
-    "\n==========================\n"
-)
+            price = get_price(item)
+            amount = price * quantity
 
-self.bill_text.insert(
-    tk.END,
-    f"Total: ₹{total}\n"
-)
+            bill += f"{item}\n"
+            bill += f"{quantity} x ₹{price} = ₹{amount}\n\n"
 
-self.bill_text.insert(
-    tk.END,
-    "==========================\n"
-)
+        bill += "--------------------------------\n"
+        bill += f"Total Amount: ₹{total}\n"
+
+        messagebox.showinfo(
+            "Final Bill",
+            bill
+        )
+
+    def run(self):
+        self.root.mainloop()
+
 
