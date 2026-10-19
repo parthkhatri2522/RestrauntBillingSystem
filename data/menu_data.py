@@ -1,32 +1,65 @@
+"""Indian restaurant menu. All prices are sample amounts in INR."""
+
 menu = {
     "Starters": {
         "Paneer Tikka": 220,
+        "Chicken Tikka": 260,
         "Chicken Lollipop": 240,
         "Veg Manchurian": 180,
-        "Hara Bhara Kebab": 160
-    },
-    "Main Course": {
-        "Dal Makhani": 200,
-        "Paneer Butter Masala": 240,
-        "Butter Chicken": 320,
-        "Chicken Curry": 280
+        "Hara Bhara Kebab": 160,
+        "Chilli Paneer": 210,
     },
     "Breakfast": {
         "Aloo Paratha": 80,
+        "Paneer Paratha": 110,
         "Masala Dosa": 120,
-        "Idli Sambhar": 100,
-        "Poha": 70
+        "Idli Sambar": 100,
+        "Poha": 70,
+        "Chole Bhature": 140,
+        "Upma": 85,
+    },
+    "Main Course - Vegetarian": {
+        "Dal Makhani": 200,
+        "Paneer Butter Masala": 240,
+        "Kadai Paneer": 230,
+        "Mix Veg": 180,
+        "Chole Masala": 170,
+        "Palak Paneer": 220,
+    },
+    "Main Course - Non-Vegetarian": {
+        "Butter Chicken": 320,
+        "Chicken Curry": 280,
+        "Mutton Rogan Josh": 400,
+        "Fish Curry": 300,
+        "Chicken Korma": 330,
+    },
+    "Rice and Biryani": {
+        "Steamed Rice": 100,
+        "Jeera Rice": 120,
+        "Veg Biryani": 200,
+        "Chicken Biryani": 260,
+        "Mutton Biryani": 350,
+    },
+    "Indian Breads": {
+        "Tandoori Roti": 20,
+        "Butter Naan": 40,
+        "Garlic Naan": 60,
+        "Lachha Paratha": 50,
+        "Plain Naan": 35,
     },
     "Beverages": {
         "Masala Chai": 30,
         "Cold Drink": 50,
-        "Lassi": 80,
-        "Buttermilk": 60
+        "Sweet Lassi": 80,
+        "Buttermilk": 60,
+        "Fresh Lime Soda": 70,
+        "Cold Coffee": 110,
     },
     "Desserts": {
         "Gulab Jamun": 90,
-        "Ice Cream": 100,
         "Rasgulla": 80,
-        "Kheer": 120
-    }
+        "Ice Cream": 100,
+        "Kheer": 120,
+        "Gajar Halwa": 140,
+    },
 }

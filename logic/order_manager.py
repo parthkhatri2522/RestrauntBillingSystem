@@ -1,10 +1,18 @@
+"""Current order state and quantity operations."""
 orders = {}
+
 
 def add_item(item):
     orders[item] = orders.get(item, 0) + 1
 
+
 def remove_item(item):
-    if item in orders:
-        orders[item] -= 1
-        if orders[item] <= 0:
-            del orders[item]
+    if item not in orders:
+        return
+    orders[item] -= 1
+    if orders[item] <= 0:
+        del orders[item]
+
+
+def clear_order():
+    orders.clear()
